@@ -13,13 +13,13 @@
 <meta property="og:site_name" content="CodeBeast">
 <meta property="og:description" content="什么是中间件Laravel中间件是触发路由事件之前或之后执行的一段代码。中间件常用于用户身份识别，CSRF保护。用户触发路由事件的时候，经常需要判断一下用户的身份，这时候就可以使用中间件了。Laravel中间件存放于app/Http/Middleware。
 新建一个中间件在Laravel项目根目录执行php artisan make:middleware AuthAdminMiddleware就">
-<meta property="og:image" content="http:/img/laravel.jpg">
-<meta property="og:updated_time" content="2016-05-27T09:15:27.625Z">
+<meta property="og:image" content="http:/image/laravel.jpg">
+<meta property="og:updated_time" content="2016-05-27T09:26:25.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Laravel中间件">
 <meta name="twitter:description" content="什么是中间件Laravel中间件是触发路由事件之前或之后执行的一段代码。中间件常用于用户身份识别，CSRF保护。用户触发路由事件的时候，经常需要判断一下用户的身份，这时候就可以使用中间件了。Laravel中间件存放于app/Http/Middleware。
 新建一个中间件在Laravel项目根目录执行php artisan make:middleware AuthAdminMiddleware就">
-<meta name="twitter:image" content="http:/img/laravel.jpg">
+<meta name="twitter:image" content="http:/image/laravel.jpg">
     
 
     
@@ -227,7 +227,7 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p><img src="img/laravel.jpg" alt=""></p>
+            <p><img src="/image/laravel.jpg" alt=""></p>
 <h2 id="什么是中间件"><a href="#什么是中间件" class="headerlink" title="什么是中间件"></a>什么是中间件</h2><p>Laravel中间件是触发路由事件之前或之后执行的一段代码。中间件常用于用户身份识别，CSRF保护。用户触发路由事件的时候，经常<br>需要判断一下用户的身份，这时候就可以使用中间件了。Laravel中间件存放于<code>app/Http/Middleware</code>。</p>
 <h2 id="新建一个中间件"><a href="#新建一个中间件" class="headerlink" title="新建一个中间件"></a>新建一个中间件</h2><p>在Laravel项目根目录执行<br><code>php artisan make:middleware AuthAdminMiddleware</code><br>就在<code>app/Http/Middleware</code>位置生成了<code>AuthAdminMiddleware.php</code>文件，然后添加逻辑代码<br><code>AuthAdminMiddleware.php</code><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Http</span>\<span class="title">Middleware</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Closure</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AuthAdminMiddleware</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * Handle an incoming request.</span><br><span class="line">     *</span><br><span class="line">     * <span class="doctag">@param</span>  \Illuminate\Http\Request  $request</span><br><span class="line">     * <span class="doctag">@param</span>  \Closure  $next</span><br><span class="line">     * <span class="doctag">@return</span> mixed</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">handle</span><span class="params">($request, Closure $next)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>( $request-&gt;user()[<span class="string">'role'</span>] != <span class="string">'admin'</span> ) <span class="keyword">return</span> redirect(<span class="string">'/'</span>);</span><br><span class="line">        <span class="keyword">return</span> $next($request);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>这是一个用于后台的中间件，若用户身份不为管理员，则重定向到首页</p>
@@ -246,7 +246,7 @@
 
 </div>
 
-    <a data-url="http:/2016/05/27/Laravel中间件/" data-id="ciopiuxnp0000w0jh3hif8k3l" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http:/2016/05/27/Laravel中间件/" data-id="ciopixpqn00012njh9lmfndve" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -353,7 +353,7 @@
                             <a href="/2016/05/27/Laravel中间件/" class="thumbnail">
     
     
-        <span style="background-image:url(img/laravel.jpg)" alt="Laravel中间件" class="thumbnail-image"></span>
+        <span style="background-image:url(/image/laravel.jpg)" alt="Laravel中间件" class="thumbnail-image"></span>
     
 </a>
 
